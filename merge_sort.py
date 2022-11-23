@@ -1,5 +1,6 @@
 # merge sort
-list_A = [9, 3, 7, 5, 6, 4, 8, 2]
+# recursive method
+list_A = [9, 3, 7, 5, 6, 4, 10, 2, 8, 1]
 
 
 def mergesort(l, h):
@@ -34,5 +35,5 @@ def merge(a, b):
     return c
 
 
-list_A = mergesort(0, 7).copy()
+list_A = mergesort(0, 9).copy()
 print(list_A)
