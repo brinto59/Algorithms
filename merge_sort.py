@@ -35,5 +35,5 @@ def merge(a, b):
     return c
 
 
-list_A = mergesort(0, 9).copy()
+list_A = mergesort(0, len(list_A)-1).copy()
 print(list_A)
