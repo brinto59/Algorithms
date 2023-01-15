@@ -1,12 +1,14 @@
 # quicksort
 import math
-arr = [10, 16, 8, 12, 15, 6, 3, 9, 5]
+# arr = [10, 16, 8, 12, 15, 6, 3, 9, 5]
 # arr = [10, 5, 8, 3, 9, 6, 12]
+arr = [5, 8, 2, 4, 3, 9]
 
 
 def partition(l, h):
     mid = int(math.ceil((l+h)/2))
     pivot = arr[mid]
+    print(pivot)
     i = l
     j = h
     while i < j:
@@ -20,6 +22,11 @@ def partition(l, h):
                 break
         if i < j:
             arr[i], arr[j] = arr[j], arr[i]
+            if j == mid:
+                mid = i
+            i += 1
+            j -= 1
+
     if arr[j] < pivot:
         arr[mid], arr[j] = arr[j], arr[mid]
     return j
