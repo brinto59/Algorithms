@@ -1,5 +1,5 @@
 # Heap sort
-# delete
+# delete max element
 import math
 
 
@@ -9,7 +9,7 @@ def max_element(array, length_array):
     length_array -= 1
     parent = 1
     if length_array < 1:
-        return None
+        return [array[length_array], length_array, array]
     for k in range(math.ceil(math.log2(length_array))):
         if 2*parent+1 <= length_array:
             if array[2*parent-1] > array[2*parent] and array[2*parent-1] > array[parent-1]:

@@ -1,7 +1,7 @@
 # heapify
 
 import math
-arr = [10, 20, 15, 12, 40, 25, 18]
+arr = [10, 20, 15, 12, 40, 25, 18, 60]
 parent = len(arr)
 length = len(arr)
 for i in range(length):
@@ -11,7 +11,7 @@ for i in range(length):
         elif arr[2*parent] >= arr[2*parent-1] and arr[2*parent] > arr[parent-1]:
             arr[2 * parent], arr[parent - 1] = arr[parent - 1], arr[2 * parent]
     elif 2*parent <= length:
-        if arr[2*parent-1] > arr[2*parent] and arr[2*parent-1] > arr[parent-1]:
+        if arr[2*parent-1] > arr[parent - 1]:
             arr[2*parent-1], arr[parent-1] = arr[parent-1], arr[2*parent-1]
     parent -= 1
 print(arr)
