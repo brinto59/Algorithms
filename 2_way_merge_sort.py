@@ -32,16 +32,17 @@ step_num = math.ceil(math.log2(n))
 i = 2  # the number of elements we are working with in every loop
 list_B = []
 for j in range(step_num):  # time taken : logn
-    h = int(i/2)  # the number of elements in every sublist
-    l = 0
+    h = int(i/2)  # the number of elements in every sublist # middle index
+    l = 0       # low index  # l+i is high index
     for k in range(math.ceil(n/i)):    # time taken : n/i
         list_B = list_A[0:l]  # time taken : 1
         if l+i <= n:
             list_B.extend(merge(list_A[l:h], list_A[h:l+i]))    # time taken : i
-        elif (math.ceil(n/(i/2)) % 2) == 0:    # math.ceil(n/(i/2)) is the number of sublist in that step
+        elif (math.ceil(n/(i/2)) % 2) == 0:
+            # math.ceil(n/(i/2)) is the number of sublist in that step # checking it is even or not
             list_B.extend(merge(list_A[l:h], list_A[h:]))  # time taken : i
         else:
-            list_B.extend(list_A[l:n])
+            list_B.extend(list_A[l:n])   # takes any odd sublist
         list_B.extend(list_A[(l+i):])   # time taken : 1
         list_A = list_B.copy()   # time taken : 1
         # print(list_A)
