@@ -1,4 +1,5 @@
 # 0/1 Knapsack Problem - Dynamic Programming
+# tabular method
 
 n = 4
 m = 8
