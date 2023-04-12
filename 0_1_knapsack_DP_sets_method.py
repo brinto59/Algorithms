@@ -42,8 +42,8 @@ def solution(s, x, p, wt, n, m):
 def main():
     n = 4
     m = 8
-    p = [0, 1, 2, 5, 6]  # profit list should be in ascending order, the wt list elements should follow it
-    wt = [0, 2, 3, 4, 5]
+    p = [0, 5, 1, 6, 2]
+    wt = [0, 4, 2, 5, 3]
     s = [[[0, 0]], [], [], [], []]  # sets 0, 1, 2, 3, 4
     x = [-1] * 5
     for i in range(1, n + 1):

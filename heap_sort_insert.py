@@ -24,7 +24,8 @@ def insert_element(element, array, length_array):
 
 def main():
     arr = [10, 20, 15, 40, 30, 1, 60, 40, 2]
-    parent = 0
+    # arr = [10, 12, 8, 15]
+    # parent = 0
     length = len(arr)
     for i in range(2, len(arr) + 1):
         for j in range(math.ceil(math.log2(len(arr)))):
