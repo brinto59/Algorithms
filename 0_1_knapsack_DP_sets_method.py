@@ -13,7 +13,7 @@ def merge(set0: list, set1: list, m) -> list:
                 result.append(set0[i])
             i += 1
         else:
-            if not(set0[i][0] == set1[j][0] and set0[i][1] == set1[j][1]) and set1[j][1] < set1[i][1] and set1[j][1] <= m:
+            if not(set0[i][0] == set1[j][0] and set0[i][1] == set1[j][1]) and set1[j][1] < set0[i][1] and set1[j][1] <= m:
                 result.append(set1[j])
             j += 1
     while i < len0:
@@ -56,7 +56,7 @@ def main():
     # print(s[3])
     # print(s[4])
 
-    solution(s, x, p, wt, n, m)
+    solution(s, x, p, wt, n, m)  # gives the 0,1 list
     print(s[4])
     print(x)
 
